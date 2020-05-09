@@ -5,7 +5,10 @@
   <h1>Message board homepage</h1>
   <ul>
     {% for post in all_posts_list %}
-      <li>{{ post.text }}</li>
+      <div class="post-entry">
+        <h2><a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></h2>
+        <p>{{ post.body }}</p>
+      </div>
     {% endfor %}
   </ul>
 {% endblock content %}
