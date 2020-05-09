@@ -1,10 +1,10 @@
-# pages/views.py
-from django.views.generic import TemplateView
+# posts/views.py
 
+from django.views.generic import ListView
 
-class HomePageView(TemplateView):
+from .models import Post
+
+class HomePageView(ListView):
+  model = Post
   template_name = 'home.html'
-
-
-class AboutPageView(TemplateView): # new
-  template_name = 'about.html'
+  context_object_name = 'all_posts_list' # new
