@@ -25,7 +25,7 @@ SECRET_KEY = 's%ykv!_#!t^-@4m%v$476w=h=*6+r#)2wl=txo=omnit2p=hdv'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
